@@ -42,7 +42,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 16,
+    "uniqCompNum": 17,
     "versionPublish": "5.5.2",
     "screenshot": "screenshot.png",
     "cssOptimize": true,
@@ -197,6 +197,48 @@
           "_customHTML": "<section class=\"info2\" group=\"Info\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <!--  -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <!--  -->\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Items\" name=\"items\" min=\"1\" max=\"5\" step=\"1\" value=\"5\">\n\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <!--  -->\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-jc-c\">\n            <div class=\"item item-1 mbr-col-lg-2 mbr-col-md-4 mbr-col-sm-12\" mbr-if=\"items > 0\">\n                <p class=\"mbr-text mbr-fonts-style mbr-semibold mbr-white align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"https://www.instagram.com/stories/highlights/17931202165602375/\" class=\"text-primary\">TOURNAMENTS</a></p>\n            </div>\n            <div class=\"item mbr-col-lg-2 mbr-col-md-4 mbr-col-sm-12\" mbr-if=\"items > 1\">\n                <p class=\"mbr-text mbr-fonts-style mbr-semibold mbr-white align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"https://www.instagram.com/stories/highlights/17889824960261293/\" class=\"text-secondary text-primary\">TRAINING</a></p>\n            </div>\n            <div class=\"item mbr-col-lg-2 mbr-col-md-4 mbr-col-sm-12\" mbr-if=\"items > 2\">\n                <p class=\"mbr-text mbr-fonts-style mbr-semibold mbr-white align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"https://www.instagram.com/stories/highlights/17889824960261293/\" class=\"text-primary\">ROAD-TRIP</a>&nbsp;</p>\n            </div>\n            <div class=\"item mbr-col-lg-2 mbr-col-md-4 mbr-col-sm-12\" mbr-if=\"items > 3\">\n                <p class=\"mbr-text mbr-fonts-style mbr-semibold mbr-white align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"https://chat.whatsapp.com/Fk6l5yHlXXDGhsiJjAK41Q\" class=\"text-primary\">WHATS-APP</a></p>\n            </div>\n            <div class=\"item mbr-col-lg-2 mbr-col-md-4 mbr-col-sm-12\" mbr-if=\"items > 4\">\n                <p class=\"mbr-text mbr-fonts-style mbr-semibold mbr-white align-center\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"index.html#map01-8\" class=\"text-primary\">KONTAKT</a></p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "sXjf5BTwz0",
           "_anchor": "info2-c",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "image2",
+          "_sourceTheme": "coworkingamp",
+          "_customHTML": "<section class=\"coworkingamp-images2 images2\" group=\"Image &amp; Video\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"range\" inline=\"\" title=\"Count\" name=\"imageCount\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/coworkingamp/components/_images/background3.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"2 Color\" name=\"twoColor\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" value=\"#ffffff\" name=\"twoColorBg\" condition=\"twoColor &amp;&amp; bg.type == 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container' : !fullWidth, 'container-fluid' : fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-lg-12 mbr-col-sm-12 mbr-col-md-12\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mbr-semibold\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-4\">\n                    WE ARE TRUSTED\n                </h4>\n                <h3 class=\"mbr-fonts-style mbr-pb-5 mbr-semibold mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    Sponsors\n                </h3>\n                <div class=\"mbr-flex flex-wrap image_wrap\" mbr-list=\"\" mbr-list-grow=\"imageCount\" mbr-class=\"{'mbr-pt-4' : showSubTitle || showTitle}\">\n                    <div class=\"image-block mbr-px-5\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/png-2-148x141.png\" alt=\"Mobirise\" width=\"77.67375886524822\" height=\"74\" layout=\"responsive\" class=\"mobirise-loader mbr-m-auto align-center\">\n                            <div placeholder=\"\" class=\"placeholder\"></div>\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/png-2-148x141.png\" alt=\"Mobirise\" data-aspectratio=\"0.9594594594594594\">\n                        </amp-img>\n                    \n                    </div>\n                <div class=\"image-block mbr-px-5\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/kein-titel-600-800-px-800-600-px-800-800-px-148x148.png\" alt=\"Mobirise\" width=\"74\" height=\"74\" layout=\"responsive\" class=\"mobirise-loader mbr-m-auto align-center\">\n                            <div placeholder=\"\" class=\"placeholder\"></div>\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/kein-titel-600-800-px-800-600-px-800-800-px-148x148.png\" alt=\"Mobirise\" data-aspectratio=\"0.6571428571428571\">\n                        </amp-img>\n                    \n                    </div><div class=\"image-block mbr-px-5\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/logo-148x148.png\" alt=\"Mobirise\" width=\"74\" height=\"74\" layout=\"responsive\" class=\"mobirise-loader mbr-m-auto align-center\">\n                            <div placeholder=\"\" class=\"placeholder\"></div>\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo-148x148.png\" alt=\"Mobirise\" data-aspectratio=\"0.6571428571428571\">\n                        </amp-img>\n                    \n                    </div><div class=\"image-block mbr-px-5\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/download-148x148.png\" alt=\"Mobirise\" width=\"74\" height=\"74\" layout=\"responsive\" class=\"mobirise-loader mbr-m-auto align-center\">\n                            <div placeholder=\"\" class=\"placeholder\"></div>\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/download-148x148.png\" alt=\"Mobirise\" data-aspectratio=\"0.6571428571428571\">\n                        </amp-img>\n                    \n                    </div><div class=\"image-block mbr-px-5\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/41qkhgetiql.-ac-148x148.jpg\" alt=\"Roundnet-Shop\" width=\"74\" height=\"74\" layout=\"responsive\" class=\"mobirise-loader mbr-m-auto align-center\">\n                            <div placeholder=\"\" class=\"placeholder\"></div>\n                            <a href=\"https://amzn.to/3JlB00g\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/41qkhgetiql.-ac-148x148.jpg\" alt=\"Roundnet-Shop\" data-aspectratio=\"1\"></a>\n                        </amp-img>\n                    \n                    </div></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@twoColor)": {
+                "background": "linear-gradient(235deg, @bg-value 0, @twoColorBg 65%)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H3": {
+              "text-align": "left"
+            },
+            ".image_wrap": {
+              "justify-content": "space-between",
+              "@media (max-width: 767px)": {
+                "flex-direction": "column",
+                "align-items": "center"
+              }
+            },
+            ".image-block": {
+              "max-width": "170px",
+              "width": "100%",
+              "margin-bottom": "40px"
+            },
+            "amp-img, img": {
+              "object-fit": "cover"
+            }
+          },
+          "_cid": "sXjMp8eHWW",
+          "_anchor": "image2-g",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
