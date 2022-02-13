@@ -32,7 +32,7 @@
       "additionalSetColors": []
     },
     "path": "@PROJECT_PATH@",
-    "name": "Site-02-11_1709",
+    "name": "Roundnet-Regensburg",
     "versionFirst": "5.5.2",
     "siteFonts": [
       {
@@ -47,7 +47,7 @@
     "screenshot": "screenshot.png",
     "cssOptimize": true,
     "favicon": "@PROJECT_PATH@/assets/images/logo-128x128.png",
-    "mbrsiteDomain": "fmlucjfqx5",
+    "mbrsiteDomain": "mvtl7jorxi",
     "robotsSwitcher": true,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": "on",
