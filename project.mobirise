@@ -13,7 +13,7 @@
         "dangerColor": "#b2ccd2",
         "mainFont": "Red Hat Text",
         "display1Font": "Red Hat Text",
-        "display1Size": "6",
+        "display1Size": "4.8",
         "display2Font": "Red Hat Text",
         "display2Size": "3.2",
         "display5Font": "Red Hat Text",
@@ -42,7 +42,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 15,
+    "uniqCompNum": 16,
     "versionPublish": "5.5.2",
     "screenshot": "screenshot.png",
     "cssOptimize": true,
@@ -81,6 +81,123 @@
         "html_before": ""
       },
       "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor",
+              "justify-content": "center"
+            },
+            "& when not (@showBrand) and not (@showLogo)": {
+              ".navbar > .container, .navbar > .container-fluid": {
+                "justify-content": "flex-end !important"
+              }
+            },
+            ".navbar-brand": {
+              "min-width": "260px"
+            },
+            ".nav-link": {
+              "margin": "0!important"
+            },
+            ".link.dropdown-toggle:after": {
+              "position": "absolute",
+              "top": "48%",
+              "right": "10px"
+            },
+            ".dropdown-menu .dropdown-toggle:after": {
+              "right": "10px"
+            },
+            ".link": {
+              "font-weight": "500",
+              "border-top": "2px solid transparent",
+              "padding": "10px 0!important",
+              "&:hover": {
+                "border-top": "2px solid @primaryColor",
+                "color": "@primaryColor"
+              }
+            },
+            "& when (@showLogo)": {
+              ".navbar-brand": {
+                ".navbar-logo": {
+                  "max-height": "60px",
+                  "min-width": "30px",
+                  "max-width": "60px",
+                  "amp-img, img": {
+                    "object-fit": "contain!important"
+                  }
+                }
+              }
+            },
+            ".navbar .navbar-collapse": {
+              "justify-content": "center",
+              "width": "100%",
+              "@media (max-width: 991px)": {
+                "background": "@menuBgColor",
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                }
+              }
+            },
+            "& when not (@showBrand) and not (@showBrand) and not (@showButtons) and not (showLogo)": {
+              ".navbar-nav": {
+                "justify-content": "space-between",
+                "width": "100%"
+              }
+            },
+            "a": {
+              "&:before": {
+                "content": "none"
+              }
+            },
+            ".dropdown-item, .nav-link, .navbar-caption": {
+              "&:hover": {
+                "color": "@primaryColor !important"
+              }
+            },
+            "& when (@showBrand)": {
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              }
+            },
+            "& when (@showItems)": {
+              ".nav-link": {
+                "margin": ".4em 1.6em !important"
+              },
+              ".dropdown-item.active, .dropdown-item:active": {
+                "background-color": "transparent"
+              },
+              ".dropdown-menu": {
+                "background": "@menuBgColor"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_sourceTheme": "trainingamp",
+          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top global once=\"menu\">\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<!--  -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\">\n\t\t<!--  -->\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n\t\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n\t\t<input type=\"range\" inline title=\"Icons Count\" name=\"socialCount\" min=\"1\" max=\"6\" value=\"2\" step=\"1\" condition=\"showSocial\">\n\t\t<header>Sidebar</header>\n\t\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t\t<option value=\"left\">Left</option>\n\t\t\t<option value=\"right\" selected>Right</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n\t\t<header>Background</header>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#efefef\" required>\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo && !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/logo1.png\" layout=\"responsive\" height=\"50\" width=\"50\" alt=\"image\" class=\"placeholder-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo1.png\" alt>\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption mbr-semibold text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">TrainingAMP</a></span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-5\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">Home</a>\n\t\t\t\t\t</li>\n\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">Training</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">Events</a>\n\n\t\t\t\t\t</li>\n\n\n\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Blog</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Contacts</a></li>\n\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link link text-black\" href=\"https://mobiri.se\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Help</a></li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md mbr-semibold btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Read More</a></div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
+          "_cid": "sXjFky2Mux",
+          "_anchor": "menu1-f",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
         {
           "alias": false,
           "_styles": {
@@ -124,7 +241,7 @@
           },
           "_name": "header2",
           "_sourceTheme": "trainingamp",
-          "_customHTML": "<section class=\"header2\" group=\"Headers\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/png_01(1)transparent-2000x1922.png\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-m-auto mbr-col-lg-6\">\n                <div class=\"content mbr-p-4\">\n                    <h1 class=\"mbr-section-title align-left mbr-fonts-style mbr-pb-2 mbr-semibold\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\"><span style=\"font-weight: normal;\">Willkommen bei</span><br> Roundnet&nbsp;<br>Regensburg</h1>\n                    <p class=\"mbr-text align-left mbr-regular mbr-pb-5 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Roundnet, im Volksmund auch bekannt unter dem Namen „Spikeball“, ist eine Trendsportart aus den USA, welche nun auch seinen Weg in die Donaustadt gefunden hat.<br></p>\n\n                    <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" mbr-buttons=\"true\" mbr-theme-style=\"display-7\"><a class=\"btn btn-lg btn-primary\" data-app-placeholder=\"Type Text\">View\n                            Trainings</a> <a class=\"btn btn-lg btn-secondary\" data-app-placeholder=\"Type Text\">Read\n                            More</a></div>\n\n                </div>\n            </div>\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 img-col mbr-col-lg-6\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/sand-1048x699.jpeg\" layout=\"responsive\" width=\"934.4944356120826\" height=\"560.875\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/sand-1048x699.jpeg\" alt title data-aspectratio=\"0.6669847328244275\"></a>\n                    </amp-img>\n                </div>\n            </div>\n\n        </div>\n\n\n\n\n\n\n\n    </div>\n</section>",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/png_01(1)transparent-2000x1922.png\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-m-auto mbr-col-lg-6\">\n                <div class=\"content mbr-p-4\">\n                    <h1 class=\"mbr-section-title align-left mbr-fonts-style mbr-pb-2 mbr-semibold\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\"><span style=\"font-weight: normal;\">Willkommen bei</span><br> Roundnet-Rabbits<br>Regensburg</h1>\n                    <p class=\"mbr-text align-left mbr-regular mbr-pb-5 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Roundnet, im Volksmund auch bekannt unter dem Namen „Spikeball“, ist eine Trendsportart aus den USA, welche nun auch seinen Weg in die Donaustadt gefunden hat.<br></p>\n\n                    <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" mbr-buttons=\"true\" mbr-theme-style=\"display-7\"><a class=\"btn btn-lg btn-primary\" data-app-placeholder=\"Type Text\">View\n                            Trainings</a> <a class=\"btn btn-lg btn-secondary\" data-app-placeholder=\"Type Text\">Read\n                            More</a></div>\n\n                </div>\n            </div>\n\n\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 img-col mbr-col-lg-6\">\n                <div class=\"image-block\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/sand-1048x699.jpeg\" layout=\"responsive\" width=\"934.4944356120826\" height=\"560.875\" alt=\"image\" class=\"placeholder-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <a href=\"#\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/sand-1048x699.jpeg\" alt title data-aspectratio=\"0.6669847328244275\"></a>\n                    </amp-img>\n                </div>\n            </div>\n\n        </div>\n\n\n\n\n\n\n\n    </div>\n</section>",
           "_cid": "sX9oezbohF",
           "_anchor": "header2-1",
           "_protectedParams": [],
@@ -604,7 +721,7 @@
             }
           },
           "_name": "map01",
-          "_customHTML": "<section class=\"map\" group=\"Maps\" mbr-class=\"{'mbr-fullscreen': fullScreen}\" plugins=\"amp-main, amp-iframe\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\t\t<input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"Pestalozzistraße 3\n93053 Regensburg\" value=\"Pestalozzistraße 3\n93053 Regensburg\">\n\t\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Text\" name=\"showSubTitle\" checked>\n\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background1.jpg\">\n\t\t\t<input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container-fliud\">\n\t\t<div class=\"mbr-row\">\n\n\t\t\t<div class=\"mbr-col-sm-12 mbr-col-lg-6 mbr-col-md-12 mbr-m-auto\">\n\t\t\t\t<div class=\"content mbr-p-4\">\n\t\t\t\t\t<h3 class=\"mbr-section-title align-left mbr-bold pb-0 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Hier findet Ihr uns</h3>\n\n\t\t\t\t\t<p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\" data-app-selector=\".mbr-text, .mbr-section-btn\">Solltet Ihr Fragen haben oder mehr über Roundnet und unsere Community erfahren wollen könnt Ihr euch jederzeit bei Jakob und Felix melden.<br><br>Jakob Teufel\n<br>0176 47779281\n<br>jakobteufel@gmx.de<br>\n<br>Felix Bernhofer\n<br>0157 54060535\n<br>felixtobias11@web.de<br><br></p>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t\t<div class=\"map-block mbr-col-md-12 mbr-col-sm-12 map-col mbr-col-lg-6\">\n\t\t\t\t<div class=\"google-map\" mbr-map=\"googleMap\"></div>\n\t\t\t\t<div class=\"map-placeholder mobirise-loader\">\n\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n</section>",
+          "_customHTML": "<section class=\"map\" group=\"Maps\" mbr-class=\"{'mbr-fullscreen': fullScreen}\" plugins=\"amp-main, amp-iframe\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\t\t<input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"Pestalozzistraße 3\n93053 Regensburg\" value=\"Pestalozzistraße 3\n93053 Regensburg\">\n\t\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Text\" name=\"showSubTitle\" checked>\n\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background1.jpg\">\n\t\t\t<input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container-fliud\">\n\t\t<div class=\"mbr-row\">\n\n\t\t\t<div class=\"mbr-col-sm-12 mbr-col-lg-6 mbr-col-md-12 mbr-m-auto\">\n\t\t\t\t<div class=\"content mbr-p-4\">\n\t\t\t\t\t<h3 class=\"mbr-section-title align-left mbr-bold pb-0 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Hier findet Ihr uns</h3>\n\n\t\t\t\t\t<p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubTitle\" data-app-selector=\".mbr-text, .mbr-section-btn\">Solltet Ihr Fragen haben oder mehr über Roundnet und unsere Community erfahren wollen könnt Ihr euch jederzeit bei Jakob und Felix melden.<br><br>Jakob Teufel\n<br><a href=\"tel:0176 47779281\" class=\"text-primary\">0176 47779281</a>\n<br><a href=\"mailto:jakobteufel@gmx.de\" class=\"text-primary\">jakobteufel@gmx.de</a><br>\n<br>Felix Bernhofer\n<br><a href=\"tel:0157 54060535\" class=\"text-primary\">0157 54060535</a>\n<br><a href=\"mailto:felixtobias11@web.de\" class=\"text-primary\">felixtobias11@web.de</a><br><br></p>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t\t<div class=\"map-block mbr-col-md-12 mbr-col-sm-12 map-col mbr-col-lg-6\">\n\t\t\t\t<div class=\"google-map\" mbr-map=\"googleMap\"></div>\n\t\t\t\t<div class=\"map-placeholder mobirise-loader\">\n\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n</section>",
           "_anchor": "map01-8",
           "_isUserblock": true,
           "_sourceTheme": "trainingamp",
