@@ -47,7 +47,7 @@
     "screenshot": "screenshot.png",
     "cssOptimize": true,
     "favicon": "@PROJECT_PATH@/assets/images/logo-128x128.png",
-    "mbrsiteDomain": "4dzlb1zpzf",
+    "mbrsiteDomain": "6wkrhzofry",
     "robotsSwitcher": true,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": "on",
@@ -65,7 +65,7 @@
       "underlineLink": true,
       "opacity": "99",
       "opacityOverlay": "80",
-      "text": "Wir verwenden Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Wir nutzen Cookies zum Speichern, z. B. um für eine sichere Anmeldung zu sorgen, aber auch um statistische Daten zur Optimierung der Website-Funktionen zu erheben, damit wir Ihnen Inhalte bereitstellen können, die auf Ihre Interessen zugeschnitten sind. Wenn Sie auf „ akzeptieren“ klicken, stimmen Sie der Verwendung dieser Cookies zu. / Cookie & Datenschutzerklärung. <a href='datenschutz.html'>Datenschutzbestimmungen</a> zu.",
+      "text": "Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von dir (z.B. IP-Adresse), um z.B. Inhalte und Anzeigen zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung kann auch erst in Folge gesetzter Cookies stattfinden. Wir teilen diese Daten mit Dritten, die wir in den Privatsphäre-Einstellungen benennen. Die Datenverarbeitung kann mit deiner Einwilligung oder auf Basis eines berechtigten Interesses erfolgen, dem du in den Privatsphäre-Einstellungen widersprechen kannst. Du hast das Recht, nicht einzuwilligen und deine Einwilligung zu einem späteren Zeitpunkt zu ändern oder zu widerrufen. Weitere Informationen zur Verwendung deiner Daten findest du in unserer Datenschutzerklärung Einige Services verarbeiten personenbezogene Daten in den USA. Indem du der Nutzung dieser Services zustimmst, erklärst du dich auch mit der Verarbeitung deiner Daten in den USA gemäß Art. 49 (1) lit. a DSGVO einverstanden. Die USA werden vom EuGH als ein Land mit einem unzureichenden Datenschutz-Niveau nach EU-Standards angesehen. Insbesondere besteht das Risiko, dass deine Daten von US-Behörden zu Kontroll- und Überwachungszwecken verarbeitet werden – unter Umständen ohne die Möglichkeit eines Rechtsbehelfs. Du bist unter 16 Jahre alt? Dann kannst du nicht in optionale Services einwilligen. Du kannst deine Eltern oder Erziehungsberechtigten bitten, mit dir in diese Services einzuwilligen. Wenn du alle Services akzeptierst, erlaubst du, dass Google User Content1,U, Calendly1,U, Google Fonts1,U, Proven Expert (Widget)1,U, YouTube1,U, Gravatar (Avatar images)1,U, WordPress.org Plugin (Embed)1,U, Vimeo1,U, Kommentare1, Emojis1,U, Google Maps1,U, Google Trends1,U, Google Analytics2,U, Awin (Link and Image Ads)3,U, Facebook Pixel3,U, MailPoet3 und AddThis (Share)3,U geladen werden. Diese sind nach ihrem Zweck in Gruppen Funktional1, Statistik2 und Marketing3 unterteilt (Zugehörigkeit durch hochgestellte Zahlen gekennzeichnet).zur Datenschutzerklärung. Wenn Sie auf „ akzeptieren“ klicken, stimmen Sie der Verwendung dieser <a href='datenschutz.html'>Cookies in unserer Datenschutzbestimmung</a> zu.",
       "textButton": "zustimmen"
     },
     "canonical-url": false
